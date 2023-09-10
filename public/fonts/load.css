@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "overpass";
+    font-display: swap;
+    src: url("./overpass/Overpass-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "overpass";
+    font-display: swap;
+    font-weight: bold;
+    src: url("./overpass/Overpass-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ubuntu";
+    font-display: swap;
+    src: url("./ubuntu/Ubuntu-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ubuntu";
+    font-display: swap;
+    font-weight: 500;
+    src: url("./ubuntu/Ubuntu-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ubuntu";
+    font-display: swap;
+    font-weight: 700;
+    src: url("./ubuntu/Ubuntu-Bold.ttf") format("truetype");
+}

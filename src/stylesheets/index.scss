@@ -1,0 +1,46 @@
+@import "./_design.scss";
+
+html{
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-family: $font-family-default;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+button, option, a {
+  cursor: pointer;
+}
+
+menu {
+  all: unset;
+}
+
+*{
+  margin:0;
+  font:inherit;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}

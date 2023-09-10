@@ -1,0 +1,193 @@
+@import "./_design.scss";
+
+// 2 - TYPO
+
+@mixin text($size, $line-height, $char-space, $font-weight) {
+  font-size: $size;
+  line-height: $line-height;
+  letter-spacing: $char-space;
+  font-weight: $font-weight;
+}
+
+body {
+  @include text(16px, 28px, 0.5px, light);
+  font-family: $font-family-default;
+  color: $very-dark-blue;
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.08px;
+}
+
+.heading {
+  @include text(40px, normal, -1.2px, bold);
+}
+
+.sub {
+  @include text(28px, 32px, 0px, bold);
+}
+
+.artefact {
+  @include text(16px, normal, 0px, bold);
+  font-family: $font-family-nav;
+}
+
+.header-link {
+  @include text(18px, 28px, 0px, 400);
+  font-family: $font-family-nav;
+  color: $very-dark-blue;
+}
+
+.menu-link {
+  @include text(16px, 28px, 0px, 400);
+  font-family: $font-family-nav;
+  color: $very-dark-blue;
+  opacity: 0.75;
+}
+
+.footer-link {
+  @include text(18px, 33px, 0px, 400);
+  font-family: $font-family-nav;
+  color: $grayish-blue;
+}
+
+h4.footer-link {
+  font-weight: 500;
+  color: white;
+}
+
+@media screen and (min-width: $medium-treshold) {
+  .title {
+    @include text(64px, normal, -1.92px, bold);
+  }
+
+  .header-link {
+    @include text(16px, normal, 0px, 400);
+    font-family: $font-family-nav;
+  }
+
+  .menu-link {
+    @include text(15px, 33px, 0px, 400);
+    font-family: $font-family-nav;
+  }
+
+  .footer-link {
+    @include text(15px, 33px, 0px, 400);
+    font-family: $font-family-nav;
+  }
+}
+
+// 3 BUTTON
+
+.button {
+  border-radius: 30px;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px 32px;
+}
+
+.button-bg {
+  @include margin-horizontal(0.5em);
+  border-radius: 2em;
+  width: 137px;
+  height: 48px;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.button-1 {
+  background: white;
+  border: none;
+  color: #ff505c;
+}
+
+.button-1:hover {
+  background: #ff7b86;
+  color: white;
+}
+
+.button-2 {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.button-2:hover {
+  background: white;
+  color: #ff7b86;
+}
+
+.button-3 {
+  background: linear-gradient(135deg, #ff8f71 0%, #ff3e55 100%);
+  border: none;
+  color: white;
+}
+
+.button-3:hover {
+  background: transparent;
+  border: 1px solid #e43e51da;
+  color: #e43e51da;
+}
+
+.button-4 {
+
+  background: none;
+  border: none;
+  color: rgb(31, 63, 91);
+}
+
+@media screen and (min-width: $medium-treshold) {
+  .button-3 {
+    background-color: white;
+    border: none;
+    color: $light-red;
+  }
+  .button-4 {
+    color: $very-light-red;
+  }
+}
+// 4 GENERAL PURPOSE
+
+/* mobile first */
+
+.container {
+  min-width: calc(100vw - 48px);
+  max-width: calc(100vw - 48px);
+}
+
+@media screen and (min-width: $mobile-treshold) {
+  .container {
+    min-width: calc(100vw - 79px);
+    max-width: calc(100vw - 79px);
+  }
+}
+
+@media screen and (min-width: $medium-treshold) {
+  .container {
+    min-width: calc(100vw - 200px);
+    max-width: calc(100vw - 200px);
+  }
+}
+
+@media screen and (min-width: $medium-plus-treshold) {
+  .container {
+    min-width: calc(100vw - 300px);
+    max-width: calc(100vw - 300px);
+  }
+}
+
+@media screen and (min-width: $desktop-treshold) {
+  .container {
+    min-width: calc(1350px);
+    max-width: calc(1350px);
+  }
+}

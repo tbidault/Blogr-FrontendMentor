@@ -1,0 +1,105 @@
+// 0 - RESPONSIVE
+$mobile-treshold: 400px;
+$medium-treshold: 1000px;
+$medium-plus-treshold: 1200px;
+$desktop-treshold: 1600px;
+
+// 1 - COLORS
+
+// primary
+// $_light-red: (356, 100%, 66%);
+// $_very-light-red: 355, 100%, 74%;
+// $_very-dark-blue: 208, 49%, 24%;
+
+$light-red: hsl(356, 100%, 66%);
+$very-light-red: hsl(355, 100%, 74%);
+$very-dark-blue: hsl(208, 49%, 24%);
+
+// neutral
+// $_grayish-blue : 240, 2%, 79%;
+// $_dark-grayish-blue: 207, 13%, 34%;
+// $_dark-black-blue: 240, 10%, 16%;
+
+$grayish-blue: hsl(240, 2%, 79%);
+$dark-grayish-blue: hsl(207, 13%, 34%);
+$dark-black-blue: hsl(240, 10%, 16%);
+
+// gradient
+// $_very-light-red: 355, 100%, 74%;
+// $_light-red: 353, 100%, 62%;
+// $_very-dark-blue: 208, 49%, 24%;
+// $_very-dark-desaturated-blue: 237, 23%, 32%;
+
+$very-light-red: hsl(355, 100%, 74%);
+$light-red: hsl(353, 100%, 62%);
+$very-dark-blue: hsl(208, 49%, 24%);
+$very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
+// 2 - TYPO
+$font-family-default: "overpass";
+$font-family-nav: "ubuntu";
+
+// 4 - UTILITIES
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin margin-vertical($margin) {
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+
+@mixin margin-horizontal($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+@mixin padding-vertical($margin) {
+  padding-top: $margin;
+  padding-bottom: $margin;
+}
+
+@mixin padding-horizontal($margin) {
+  padding-left: $margin;
+  padding-right: $margin;
+}
+
+@mixin column-justify($policy) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $policy;
+}
+
+@mixin column-align($policy) {
+  display: flex;
+  flex-direction: column;
+  align-items: $policy;
+}
+
+@mixin column($justify-policy, $align-policy) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify-policy;
+  align-items: $align-policy;
+}
+
+@mixin row-justify($policy) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $policy;
+}
+
+@mixin row-align($policy) {
+  display: flex;
+  flex-direction: row;
+  align-items: $policy;
+}
+
+@mixin row($justify-policy, $align-policy) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify-policy;
+  align-items: $align-policy;
+}

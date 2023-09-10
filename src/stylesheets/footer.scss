@@ -1,0 +1,65 @@
+@import "./_design.scss";
+
+.footer {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: $dark-black-blue;
+  border-top-right-radius: 6rem;
+  @include center();
+}
+
+.footer-logo{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link-container > .footer-link:hover {
+  text-decoration: underline;
+}
+
+.link-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media screen and (min-width: $medium-treshold) {
+  .footer-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2em;
+    justify-items: start;
+    align-items: start;
+  }
+  .footer-logo{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+   .link-category {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    align-items: start;
+   }
+   h4.footer-link{
+    text-align: start;
+   }
+   .footer-link {
+    text-align: start;
+   }
+}

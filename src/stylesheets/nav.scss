@@ -1,0 +1,234 @@
+@import "./_design.scss";
+
+#nav {
+  position: relative;
+  margin-bottom: 3rem;
+  border-bottom-left-radius: 6rem;
+  padding-bottom: 9rem;
+  background: linear-gradient(135deg, #ff8f71 0%, #ff3e55 100%);
+  @include center();
+  overflow: hidden;
+}
+
+#nav > .background-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -40%);
+  z-index: 0;
+}
+
+.navLayout {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+#navTop {
+  @include margin-vertical(4em);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu-trigger {
+  all: unset;
+  cursor: pointer;
+}
+
+#navMid {
+  @include margin-vertical(2em);
+}
+
+.text {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#navBot {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#navButton1 {
+  background: white;
+  border: none;
+  color: #ff505c;
+}
+
+#navButton2 {
+  background: #ff505c;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.navButton {
+  @include margin-horizontal(0.5em);
+  border-radius: 2em;
+  width: 137px;
+  height: 48px;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.menu-wrapper {
+  position: relative;
+  align-self: center;
+}
+
+menu.mobile {
+  position: absolute;
+  border-radius: 5px;
+  @include padding-vertical(1rem);
+  background-color: white;
+  @include center();
+  z-index: 1000;
+  transform: translateX(-50%) translateY(9rem);
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.25);
+}
+
+menu.mobile > .container {
+  min-width: calc(100% - 3rem);
+  max-width: calc(100% - 3rem);
+}
+
+menu.mobile > .layout {
+  @include column-align(center);
+}
+
+menu.mobile > .layout > * {
+  @include margin-vertical(1rem);
+}
+
+menu.mobile .entry {
+  min-width: 100%;
+  @include column-align(center);
+}
+
+menu.mobile .wrapper {
+  min-width: 100%;
+}
+
+.header-link.light {
+  opacity: 0.75;
+  transition: 300ms linear opacity;
+}
+
+.header-link::after {
+  display: inline-block;
+  @include margin-horizontal(0.5rem);
+  content: url("../../public/assets/images/icon-arrow-dark.svg");
+  transform: translateY(-1px);
+}
+
+.header-link.light::after {
+  transform: translateY(1px) rotate(180deg);
+}
+
+menu .sub-entries {
+  margin-top: 1rem;
+  @include padding-vertical(0.5rem);
+  border-radius: 5px;
+  min-width: 100%;
+  background-color: #e8e4e4;
+  @include column-align(center);
+}
+
+menu .sub-entries > * {
+  @include margin-vertical(0.5em);
+}
+
+menu.mobile hr {
+  min-width: 100%;
+  border: solid 1px #e8e4e4;
+}
+
+.desktop {
+  display: none;
+}
+
+menu.desktop {
+  min-width: 100%;
+}
+
+menu.desktop .layout {
+  @include row-justify(space-between);
+}
+
+menu.desktop .primary {
+  @include row-align(center);
+}
+
+menu.desktop .buttons {
+  @include row-align(center);
+}
+
+menu.desktop .buttons .button-4 {
+  @include margin-horizontal(1em);
+  color: white;
+  opacity: 0.75;
+}
+
+menu.desktop img {
+  margin-right: 4rem;
+}
+
+.menu-link:hover {
+  font-weight: bold;
+}
+
+@media screen and (min-width: $medium-treshold) {
+  .mobile, menu.mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: initial;
+  }
+
+  menu .wrapper {
+    position: relative;
+  }
+
+  menu .wrapper > .sub-entries {
+    @include padding-vertical(1em);
+    padding-left: 1.5em;
+    padding-right: 4.5em;
+    position: absolute;
+    align-items: start;
+    background-color: white;
+    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.25);
+  }
+
+  .header-link {
+    @include margin-horizontal(0.75em);
+    font-weight: bold;
+    color: white;
+    opacity: 0.75;
+  }
+
+  .header-link.light {
+    display: inline-block;
+    opacity: 1;
+    text-decoration: underline;
+    transform: translateY(2.5px);
+  }
+
+  .header-link::after {
+    content: url("../../public/assets/images/icon-arrow-light.svg");
+  }
+
+  .menu-link {
+    color: black;
+  }
+
+  
+}
